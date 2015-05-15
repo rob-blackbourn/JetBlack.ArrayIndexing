@@ -7,7 +7,7 @@ matrix without rebuilding it as multi-dimensional.
 
 # Example
 
-The test following demonstates the behaviour.
+The following test demonstates the behaviour.
 
 ```cs
     var array3D = new IndexableArray<int>(
