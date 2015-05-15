@@ -33,12 +33,12 @@ The following test demonstates the behaviour.
 The following algorithm is used to transform the n-dimensional indices into a 1-dimensional index.
 
 ```cs
-    public static T Index<T>(this T[] array, int[] bounds, params int[] indices)
+    public int ToIndex(int[] bounds, params int[] indices)
     {
         var index = indices[0];
         for (int i = 1, sum = bounds[i - 1]; i < indices.Length; ++i, sum *= bounds[i - 1])
             index += sum * indices[i];
-        return array[index];
+        return index;
     }
 ```
 
