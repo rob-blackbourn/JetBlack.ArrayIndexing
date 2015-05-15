@@ -62,8 +62,9 @@ namespace JetBlack.ArrayIndexing.Test
                 },
                 4, 3, 2);
 
-            Assert.AreEqual(20, array3D[0, 2, 1]); // col=0, row=2, slice=1 -> 20
-            Assert.AreEqual(0, array3D[0, 0, 0]); // col=0, row=0, slice=0 -> 0
+            Assert.AreEqual(0, array3D[0, 0, 0]);
+            Assert.AreEqual(20, array3D[0, 2, 1]);
+            Assert.AreEqual(23, array3D[3, 2, 1]);
         }
 
         [Test]
