@@ -35,13 +35,6 @@ The following algorithm is used to transform the n-dimensional indices into a 1-
 ```cs
     public static T Index<T>(this T[] array, int[] bounds, params int[] indices)
     {
-        if (array == null)
-            throw new ArgumentNullException("array");
-        if (bounds == null)
-            throw new ArgumentNullException("bounds");
-        if (indices.Length == 0 || indices.Length != bounds.Length)
-            throw new ArgumentException("There should be at least one index and as many indices as bounds", "indices");
-
         var index = indices[0];
         for (int i = 1, sum = bounds[i - 1]; i < indices.Length; ++i, sum *= bounds[i - 1])
             index += sum * indices[i];
