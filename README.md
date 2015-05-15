@@ -43,5 +43,4 @@ The following algorithm is used to transform the n-dimensional indices into a 1-
 ```
 
 It should be clear that the sum of the bounds at each dimension can be
-precomputed. The `IndexableArray` class does this optimisation, and also
-provides argument checking.
+precomputed. The `ArrayIndexer` class does this optimisation.
